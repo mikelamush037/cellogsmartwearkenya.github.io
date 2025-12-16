@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Products - CELLOGSMARTWEARKENYA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .upload-page {
+            padding: 40px 0;
+            min-height: calc(100vh - 200px);
+            background-color: var(--pale-blue);
+        }
+        
+        .upload-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .page-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+        
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+        }
+        
+        .upload-area {
+            border: 3px dashed var(--primary-blue);
+            border-radius: 12px;
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--pale-blue);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .upload-area:hover {
+            border-color: var(--accent-yellow);
+            background-color: var(--light-yellow);
+        }
+        
+        .upload-area i {
+            font-size: 4rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .upload-hint {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .upload-container {
+                padding: 20px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔝 Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><i class="fas fa-truck"></i> FREE Delivery in Nairobi for orders over KES 3,000</span>
+                <span><i class="fas fa-gift"></i> Start selling today - 0% commission for first month!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <a href="index.html" class="logo-container">
+                        <div class="logo-icon">CSK</div>
+                        <div>
+                            <div class="logo-text">CELLOG<span>SMARTWEAR</span>KENYA</div>
+                            <div class="tagline">Sell Your Products Online</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="action-value">0780 259 386</div>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <div class="action-value">Back to Home</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Upload Page Content -->
+    <section class="upload-page">
+        <div class="container">
+            <div class="upload-container">
+                <h1 class="page-title">Sell Your Products</h1>
+                <p class="page-subtitle">Reach thousands of customers on Kenya's #1 online fashion platform</p>
+                
+                <form class="upload-form" id="uploadForm">
+                    <div class="form-group">
+                        <label class="form-label">Product Title *</label>
+                        <input type="text" class="form-control" placeholder="e.g., Men's Casual Shirt - Blue Check" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Product Description *</label>
+                        <textarea class="form-control" rows="4" placeholder="Describe your product in detail..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Category *</label>
+                        <select class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="mens">Men's Wear</option>
+                            <option value="womens">Women's Wear</option>
+                            <option value="kids">Kids Fashion</option>
+                            <option value="school">School Items</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Product Images *</label>
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Click to Upload Images</h3>
+                            <p class="upload-hint">JPG or PNG, max 5MB each</p>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Price (KES) *</label>
+                        <input type="number" class="form-control" placeholder="e.g., 1499" min="100" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Condition *</label>
+                        <select class="form-control" required>
+                            <option value="">Select Condition</option>
+                            <option value="new">New</option>
+                            <option value="like_new">Like New</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Your Contact Details *</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="tel" class="form-control" placeholder="Phone Number (e.g., 0780 259 386)" required style="margin-top: 10px;">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="window.history.back()">Cancel</button>
+                        <button type="submit" class="btn btn-yellow">Submit Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 👣 Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon" style="width: 40px; height: 40px; font-size: 1.2rem;">CSK</div>
+                        CELLOG<span>SMARTWEAR</span>KENYA
+                    </div>
+                    <p>Kenya's leading online fashion & school accessories store. Start selling your products today and reach thousands of customers.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">For Sellers</h3>
+                    <ul>
+                        <li><a href="upload.html"><i class="fas fa-chevron-right"></i> Sell Products</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Seller Guide</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Commission Rates</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ for Sellers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Contact Information</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <div>KOMA Market, Kangundo Road<br>Nairobi, Kenya</div></li>
+                        <li><i class="fas fa-phone"></i> <div>0780 259 386<br>Sellers: 0712 345 678</div></li>
+                        <li><i class="fas fa-envelope"></i> <div>sellers@cellogsmartwearkenya.com</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CELLOGSMARTWEARKENYA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const uploadForm = document.getElementById('uploadForm');
+            
+            if (uploadArea && fileInput) {
+                uploadArea.addEventListener('click', () => fileInput.click());
+                fileInput.addEventListener('change', function() {
+                    if (this.files.length > 0) {
+                        uploadArea.innerHTML = `
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            <h3>${this.files.length} file(s) selected</h3>
+                            <p class="upload-hint">Click to change files</p>
+                        `;
+                    }
+                });
+            }
+            
+            if (uploadForm) {
+                uploadForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you! Your product has been submitted for review. We will contact you within 24 hours.');
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
