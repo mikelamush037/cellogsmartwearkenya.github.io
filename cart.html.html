@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - CELLOGSMARTWEARKENYA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cart-page {
+            padding: 40px 0;
+            min-height: calc(100vh - 200px);
+            background-color: var(--pale-blue);
+        }
+        
+        .page-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .cart-items-section, .cart-summary {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .cart-summary {
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--pale-blue);
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cart-empty i {
+            font-size: 5rem;
+            color: var(--light-blue);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔝 Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <span><i class="fas fa-truck"></i> FREE Delivery in Nairobi for orders over KES 3,000</span>
+                <span><i class="fas fa-gift"></i> Use code WELCOME10 for 10% off first order</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <a href="index.html" class="logo-container">
+                        <div class="logo-icon">CSK</div>
+                        <div>
+                            <div class="logo-text">CELLOG<span>SMARTWEAR</span>KENYA</div>
+                            <div class="tagline">Your Shopping Cart</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="action-item contact-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="action-value">0780 259 386</div>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <div class="action-value">Continue Shopping</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Page Content -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Shopping Cart</h1>
+                <p class="page-subtitle">Review your items and proceed to checkout</p>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-items-section">
+                    <h2 class="section-title">Your Items</h2>
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any items to your cart yet.</p>
+                        <a href="index.html" class="btn" style="margin-top: 20px;">Start Shopping</a>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2 class="section-title">Order Summary</h2>
+                    <div style="text-align: center; padding: 40px 20px;">
+                        <p>Add items to your cart to see order summary</p>
+                    </div>
+                    <a href="index.html" class="btn btn-yellow" style="width: 100%;">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 👣 Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon" style="width: 40px; height: 40px; font-size: 1.2rem;">CSK</div>
+                        CELLOG<span>SMARTWEAR</span>KENYA
+                    </div>
+                    <p>Kenya's leading online fashion & school accessories store. Shop with confidence with our secure M-Pesa payments.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Need Help?</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Support</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping Info</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Returns & Exchanges</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Size Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Contact Information</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <div>KOMA Market, Kangundo Road<br>Nairobi, Kenya</div></li>
+                        <li><i class="fas fa-phone"></i> <div>0780 259 386<br>Support: 0712 345 678</div></li>
+                        <li><i class="fas fa-envelope"></i> <div>support@cellogsmartwearkenya.com</div></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CELLOGSMARTWEARKENYA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
